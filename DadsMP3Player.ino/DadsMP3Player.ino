@@ -40,9 +40,9 @@ void setup() {
 
   MP3player.begin();
   MP3player.setVolume(1, 1);
-  
+
   previousTrigger = 255; //Setup the new vs old trigger
-  
+
   Serial.println("Looking for Buttons to be depressed...");
 }
 
@@ -97,6 +97,6 @@ void loop() {
 
   Serial.print("Playing track #");
   Serial.println(triggerNumber);
+  MP3player.stopTrack();
   MP3player.playTrack(triggerNumber);
 }
-
